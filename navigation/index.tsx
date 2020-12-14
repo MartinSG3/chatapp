@@ -7,7 +7,7 @@ import { Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
+import TopNavigator from './TopNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
 // If you are not familiar with React Navigation, we recommend going through the
@@ -30,7 +30,9 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ 
       headerStyle: {
-        backgroundColor: Colors.light.tint
+        backgroundColor: Colors.light.tint,
+        shadowOpacity: 0,
+        elevation: 0,
       },
       headerTintColor: Colors.light.background,
       headerTitleAlign: "left", 
@@ -38,7 +40,7 @@ function RootNavigator() {
         fontWeight: "bold"
       }
      }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator}
+      <Stack.Screen name="Root" component={TopNavigator}
       options={{
         title: "chatApp",
         headerRight: () => (
