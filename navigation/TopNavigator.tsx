@@ -8,7 +8,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
+import ChatScreen from '../screens/ChatScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { TopParamList, TabOneParamList, TabTwoParamList } from '../types';
 
@@ -45,7 +45,7 @@ export default function BottomTabNavigator() {
       />
       <TopTab.Screen
         name="Chat"
-        component={TabTwoNavigator}
+        component={ChatScreen}
       />
       <TopTab.Screen
         name="Call"
@@ -74,7 +74,7 @@ function TabOneNavigator() {
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="TabOneScreen"
-        component={TabOneScreen}
+        component={ChatScreen}
         options={{ headerTitle: 'Tab One Title' }}
       />
     </TabOneStack.Navigator>
