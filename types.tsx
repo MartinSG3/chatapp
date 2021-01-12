@@ -28,10 +28,11 @@ export type MessageChannel = {
   id: String;
   content: String;
   createdAt: String;
+  user: User; 
 }
 
 export type ChatBox = {
   id: String;
-  users: [User];
+  users: User[];
   recentMessage: MessageChannel;
 };
