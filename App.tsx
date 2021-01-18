@@ -46,7 +46,7 @@ function App() {
       }       
 
       const newUser = {
-        id: userInformation.attributes.sub ,
+        id: userInformation.attributes.sub,
         name: userInformation.username,
         imageurl: getRandomImages(),
         status: "Hey, i'm testing the chatApp",

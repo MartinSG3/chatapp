@@ -10,6 +10,7 @@ import { RootStackParamList } from '../types';
 import TopNavigator from './TopNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 import ChatRoom from '../screens/ChatRoom'
+import Contacts from '../screens/Contacts'
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -69,6 +70,7 @@ function RootNavigator() {
           </View>
         )   
       })} />
+      <Stack.Screen name="Contacts" component={Contacts}/>
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import ChatList from '../components/ChatItem'
-import { View } from '../components/Themed';
 
 import ChatBox from '../data/ChatBox';
+import MessageButton from '../components/MessageButton'
 
 export default function TabOneScreen() {
   return (
@@ -15,6 +15,7 @@ export default function TabOneScreen() {
       keyExtractor={(item) => item.id}
       style={{width: '100%'}}
       />
+      <MessageButton />
     </View>
   );
 }
